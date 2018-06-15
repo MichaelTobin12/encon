@@ -1,0 +1,163 @@
+@font-face {
+    font-family: GothamBold;
+    src: url("../fonts/Gotham-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: GothamBook;
+    src: url("../fonts/GothamBook.ttf");
+}
+@font-face {
+    font-family: GothamLight;
+    src: url("../fonts/Gotham-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: GothamBookItalic;
+    src: url("../fonts/GothamBookItalic.ttf");
+}
+
+
+body{background-color:#f6f6f6;}
+.lightblue{color: #0798e2;}
+.pink{color: #f169a5;}
+.darkblue{color:#132953;}
+.white{color:#fff;}
+.betty-white{
+	background-color: #fff;
+}
+.thatOneGradient{
+	background: linear-gradient(to bottom, #f169a5 0%,#aa4799 23%,#712b90 50%,#132953 100%);
+}
+.upper{
+	text-transform: uppercase;
+}
+.font-24{
+	font-size: 24px!important;
+}
+.pt20{
+	padding-top:20px;
+}
+.pr40{
+	padding-right: 40px;
+}
+.mr20{
+	margin-right:20px;
+}
+.mb40{
+	margin-bottom: 40px;
+}
+.mb10{
+	margin-bottom: 10px;
+}
+.mt40{
+	margin-top: 40px;
+}
+.mt50{
+	margin-top: 50px;
+}
+.mt60{
+	margin-top: 60px;
+}
+.mt65{
+	margin-top: 65px;
+}
+.disc{
+	font-family: 'GothamBookItalic';
+	font-size: 14px;
+	line-height: 20px;
+	color: #878787;
+}
+span{
+	color:#132953;	
+}
+.block{display: block;}
+.gothamBook{
+	font-family: 'GothamBook';
+}
+.gothamBold{
+	font-family: 'GothamBold';
+}
+
+.gothamLight{
+	font-family: 'GothamLight'
+}
+h1{
+	font-family: 'GothamBold';
+	font-size: 72px;
+	line-height: 84px;
+	letter-spacing: -1px;
+}
+.h1{
+	font-family: 'GothamBold';
+	font-size: 72px;
+	line-height: 84px;
+	letter-spacing: -1px;
+}
+h2{
+	font-family: 'GothamBold';
+	font-size: 36px;
+	line-height: 48px;
+	letter-spacing: -0.5px;
+}
+.h2{
+	font-family: 'GothamBold';
+	font-size: 36px;
+	line-height: 48px;
+	letter-spacing: -0.5px;
+}
+h3{
+	font-family: 'GothamBook';
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: -0.33;
+}
+.h3{
+	font-family: 'GothamBook';
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: -0.33;
+}
+h4{
+	font-family: 'GothamBold';
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: -0.33;
+}
+h5{
+	font-family: 'GothamBold';
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: -0.11;
+	color:#132953;
+}
+
+p {
+	font-family: 'Arvo', serif;
+	font-size: 16px;
+	letter-spacing: -0.1px;	
+	line-height: 26px;
+	color:#132953;
+}
+
+
+/*- Modified container -*/
+/*@media (min-width: 992px){
+.container {
+    max-width: 960px;
+}*/
+
+@media (min-width: 1300px){
+.container {
+    max-width: 1236px;
+}
+
+@media (min-width: 576px){
+.offset-sm-1 {
+    margin-left: 6.333333%;
+}
+
+@media (min-width: 576px){
+.col-sm-11 {
+    -ms-flex: 0 0 93.666667%;
+    flex: 0 0 93.666667%;
+    max-width: 93.666667%;
+}
