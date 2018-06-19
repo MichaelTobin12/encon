@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg-icon"xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <title>icon/hardware/keyboard_arrow_right_24px</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <polygon id="path-1" points="8.59 16.59 13.17 12 8.59 7.41 10 6 16 12 10 18"></polygon>
     </defs>
-    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Website"  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-837.000000, -7552.000000)" id="RSVP">
             <g transform="translate(81.000000, 7065.000000)">
                 <g id="Link" transform="translate(654.000000, 478.000000)">
@@ -15,7 +15,7 @@
                             <use xlink:href="#path-1"></use>
                         </mask>
                         <g fill-rule="nonzero"></g>
-                        <g id="✱-/-Color-/-Icons-/-Selected-/-On-Primary-/-Active-" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
+                        <g class="svgBlue" id="✱-/-Color-/-Icons-/-Selected-/-On-Primary-/-Active-" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
                             <rect id="Rectangle-3" x="0" y="0" width="24" height="24"></rect>
                         </g>
                     </g>

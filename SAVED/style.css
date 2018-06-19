@@ -311,6 +311,9 @@
 	font-family: GothamBook;
 	padding-top: 13px;
 }
+#location .offset-sm-1 .btn-blue:hover{
+	box-shadow: 0 7px 65px -13px rgba(0,0,0,0.7);
+}
 
 
 #rsvp .thatOneGradient{

@@ -1,16 +1,21 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="@yield('page_keywords')">
+    <meta name="description" content="@yield('page_description')">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, maximum-scale=1 user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/faviconBooj.ico">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/generalStyles.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script src="js/min/modernizr-2.8.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <title>ENCON 2018</title>
 </head>
 <body id="ENCON2018">
-    <header class="siteNav">
+    <header class="siteNav" id="site-header">
         <ul class="darkblue">
             <a href="#details"><li><span class="mr20">Details</span><span class="dot active"></span></li></a>
             <a href="#schedule"><li><span class="mr20">Schedule</span><span class="dot"></span></li></a>
@@ -20,6 +25,19 @@
             <a href="#rsvp"><li><span class="mr20">RSVP</span><span class="dot"></span></li></a>
         </ul>
     </header>
+    <div id="mobileHam"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <div class="container-fluid">
+            <ul class="list-unstyled nav-list">
+                <a href="#details" title="Scroll to Details"><li><span class="mr20">Details</span><span class="dot active"></span></li></a>
+                <a href="#schedule" title="Scroll to Schedule"><li><span class="mr20">Schedule</span><span class="dot"></span></li></a>
+                <a href="#speakers" title="Scroll to Speakers"><li><span class="mr20">Speakers</span><span class="dot"></span></li></a>
+                <a href="#sponsors" title="Scroll to Sponsors"><li><span class="mr20">Sponsors</span><span class="dot"></span></li></a>
+                <a href="#location" title="Scroll to Location"><li><span class="mr20">Location</span><span class="dot"></span></li></a>
+                <a href="#rsvp" title="Scroll to RSVP"><li><span class="mr20">RSVP</span><span class="dot"></span></li></a>
+            </ul>
+        </div>
+    </div>
     <div class="scrollTrigger">&nbsp;</div>
     <div class="container-fluid">
         <div class="row">
@@ -282,7 +300,7 @@
                                 <a href="https://www.planomatic.com/" target="_blank">
                                     <div class="sponsor">
                                         <!-- <img src="http://placehold.it/362/362"> -->
-                                        <img src="/assets/images/sponsors/planomatic.png" alt="planomatic">
+                                        <img src="/assets/images/Sponsors/planomatic.png" alt="planomatic">
                                     </div>
                                 </a>
                             </div>
@@ -290,7 +308,7 @@
                                 <a href="http://www.fromyourfriends.com/" target="_blank">
                                     <div class="sponsor">
                                         <!-- <img src="http://placehold.it/362/362"> -->
-                                        <img src="/assets/images/sponsors/from-your-friends.png" alt="friends">
+                                        <img src="/assets/images/Sponsors/from-your-friends.png" alt="friends">
                                     </div>
                                 </a>
                             </div>
@@ -334,33 +352,32 @@
                     <div class="thatOneGradient">
                         <div class="container">
                             <h2 class="white">RSVP</h2>
-                            <p class="white">Our event is open to Enterprise Network members only. Please let us know which events you plan to attend below.</p>
+                            <p class="white rsvpDes">Our event is open to Enterprise Network members only. Please let us know which events you plan to attend below.</p>
                             <div class="row">
                                 <div class="col-sm-9">
                                     <form id="contact-form" action="contact.php" method="post" novalidate="novalidate">
                                         <div class="row">
-                                            <div class="col-sm-4 float-label-wrap float-label-wrap-column">
-                                                <label for="first_name">First Name</label>
-                                                <input id="first_name" type="text" name="first_name" placeholder="First Name" required="" class="form-control float-label-form-control" aria-required="true">
+                                            <div class="form-group col-sm-4">
+                                                <input id="first_name" type="text" name="first_name" required class="form-control" aria-required="true">
+                                                <label for="first_name" class="form-control-placeholder">First Name</label>
                                             </div>
-                                            <div class="col-sm-4 float-label-wrap float-label-wrap-column">
-                                                <label for="last_name">Last Name</label>
-                                                <input id="last_name" type="text" name="last_name" placeholder="Last Name" required="" class="form-control float-label-form-control" aria-required="true">
+                                            <div class="form-group col-sm-4">
+                                                <input id="last_name" type="text" name="last_name" required class="form-control" aria-required="true">
+                                                <label for="last_name" class="form-control-placeholder">Last Name</label>
                                             </div>
-                                            <div class="col-sm-4 float-label-wrap float-label-wrap-column">
-                                                <label for="email">Email Address</label>
-                                                <input id="email" type="email" name="email" placeholder="Email Address" required="" class="form-control float-label-form-control" aria-required="true">
+                                            <div class="form-group col-sm-4">
+                                                <input id="email" type="email" name="email" required class="form-control" aria-required="true">
+                                                <label for="email" class="form-control-placeholder">Email Address</label>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-4 float-label-wrap float-label-wrap-column">
-                                                <label for="official_title">Official Title</label>
-                                                <input id="official_title" type="text" name="official_title" placeholder="Official Title" required="" class="form-control float-label-form-control" aria-required="true">
+                                            <div class="form-group col-sm-4">
+                                                <input id="official_title" type="text" name="official_title" required class="form-control" aria-required="true">
+                                                <label for="official_title" class="form-control-placeholder">Official Title</label>
                                             </div>
-                                            <div class="col-sm-4 float-label-wrap float-label-wrap-column">
-                                                <label for="company">Company</label>
+                                            <div class="col-sm-4 form-group">
                                                 <div class="select-wrapper">
-                                                    <select id="company" name="company" required="" class="form-control float-label-form-control watermark" aria-required="true">
+                                                    <select id="company" name="company" required="" class="form-control watermark" aria-required="true">
                                                         <option value="">Company</option>
                                                         <option value="guest">Guest</option>
                                                         <option value="booj">booj</option>
@@ -396,12 +413,13 @@
                                                         <option value="Turpin Real Estate">Turpin Real Estate</option>
                                                         <option value="Wright Kingdom Real Estate">Wright Kingdom Real Estate</option>
                                                     </select>
+                                                    <label for="company" class="form-control-placeholder noDisplay">Company</label>
+                                                    <?php echo file_get_contents("assets/svg/keyboard_arrow_right_24px.svg"); ?>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-4 float-label-wrap float-label-wrap-column">
-                                                <label for="tshirt_size">T-shirt Size</label>
+                                            <div class="col-sm-4 form-group">
                                                 <div class="select-wrapper">
-                                                    <select id="tshirt_size" name="tshirt_size" required="" class="form-control float-label-form-control watermark" aria-required="true">
+                                                    <select id="tshirt_size" name="tshirt_size" required="" class="form-control watermark" aria-required="true">
                                                         <option value="">T-shirt Size</option>
                                                         <option value="xs">XS</option>
                                                         <option value="small">Small</option>
@@ -410,40 +428,39 @@
                                                         <option value="xl">XL</option>
                                                         <option value="xxl">XXL</option>
                                                     </select>
+                                                    <label for="tshirt_size" class="form-control-placeholder noDisplay">T-shirt Size</label>
+                                                    <?php echo file_get_contents("assets/svg/keyboard_arrow_right_24px.svg"); ?>
                                                 </div>
-                                                <p class=""><a href="https://www.customink.com/items/sizing/116900_lineup/standard.htm" title="View sizing chart" target="_blank" class="orange">Unisex Sizing</a></p>
+                                                <a href="https://www.customink.com/items/sizing/116900_lineup/standard.htm" title="View sizing chart" target="_blank" class="unisex white"><div class="white">Unisex Sizing
+                                                <?php echo file_get_contents("assets/svg/keyboard_arrow_right_24px.svg"); ?></div></a>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-9 float-label-wrap float-label-wrap-column">
-                                                <label for="dietary_restrictions">Dietary Restrictions</label><textarea id="dietary_restrictions" name="dietary_restrictions" rows="4" cols="50" placeholder="Dietary Restrictions" class="form-control float-label-form-control"></textarea>
+                                            <div class="col-sm-9 form-group">
+                                                <textarea id="dietary_restrictions" name="dietary_restrictions" rows="4" cols="50" class="form-control" required></textarea>
+                                                <label for="dietary_restrictions" class="form-control-placeholder textArea">Dietary Restrictions</label>
                                             </div>
-                                            <div class="col-md-3">
-                                                <span class="label white">I plan to attend the</span>
+                                            <div class="col-md-3 checkboxSection">
+                                                <span class="label white">I Plan to Attend the...</span>
                                                 <ul class="list-unstyled">
                                                     <li class="">
                                                         <div class="checkbox">
                                                             <input id="asf-broker-conference" type="checkbox" name="broker_conference" value="Yes">
-                                                            <label for="asf-broker-conference">
-                                                                Broker Conference on November 13-14
-                                                            </label>
+                                                            <label for="asf-broker-conference" class="white">Broker Conference on November 13-14</label>
                                                         </div>
                                                     </li>
                                                     <li class="">
                                                         <div class="checkbox">
                                                             <input id="asf-group-dinner" type="checkbox" name="group_dinner" value="Yes">
-                                                            <label for="asf-group-dinner">
-                                                                Group Dinner
-                                                            </label>
+                                                            <label for="asf-group-dinner" class="white">Group Dinner</label>
                                                         </div>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            
                                             <div class="col-md-3 margin-top-30 md-margin-top-85">
-                                                <input type="submit" value="Submit" name="Submit" class="btn btn-primary btn-block">
+                                                <input type="submit" value="Submit" name="Submit" class="btn-white">
                                             </div>
                                         </div>
                                     </form>
