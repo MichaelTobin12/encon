@@ -64,13 +64,14 @@ var lastScrollTop = 0;
 				else {
 				    if((pusherArray.indexOf(anchorArray[i]) > -1)){
 				    }else{
-				    	$('.siteNav ul li .dot.active').removeClass('active');
-						$(".siteNav a[href*='"+anchorArray[i]+"']").find('.dot').addClass('active');
 				    	if(lastScrolled != anchorArray[i]){
 				    		$('html, body').animate({
 						        scrollTop: tempAnchor.offset().top
 						    }, 'slow');
 						    lastScrolled = anchorArray[i];
+
+						    $('.siteNav ul li .dot.active').removeClass('active');
+							$(".siteNav a[href*='"+anchorArray[i]+"']").find('.dot').addClass('active');
 						}
 				    	pusherArray.push(anchorArray[i]);
 				    }
@@ -82,10 +83,12 @@ var lastScrollTop = 0;
 				} 
 				else {
 				    if((pusherArray.indexOf(anchorArray[i]) > -1)){
-				    }else{
-				    	lastScrolledTop = anchorArray[i-1];
+				    	lastScrolledTop = anchorArray[i];
+				    	console.log(lastScrolledTop)
 				    	$('.siteNav ul li .dot.active').removeClass('active');
 						$(".siteNav a[href*='"+lastScrolledTop+"']").find('.dot').addClass('active');
+				    }else{
+				    	
 
 				    }
 				}
@@ -117,6 +120,17 @@ var lastScrollTop = 0;
     		setTimeout(function(){ menuWasClicked = false; }, 10000);
 	  });
 
+
+	$('.checkbox').click(function(e){
+		if($(this).find('.rectangle').hasClass('active')){
+			$(this).find('.rectangle').removeClass('active');
+			$(this).find($(":input")).attr( "checked", false );
+		}else{
+			$(this).find('.rectangle').addClass('active');
+			$(this).find($(":input")).attr( "checked", true );
+		}
+    		
+	});
 
 	$.fn.isAfter = function(sel){
         return this.prevAll().filter(sel).length !== 0;

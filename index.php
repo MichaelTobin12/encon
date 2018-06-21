@@ -1,8 +1,8 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="@yield('page_keywords')">
-    <meta name="description" content="@yield('page_description')">
+    <meta name="keywords" content="ENCON 2018">
+    <meta name="description" content="ENCON 2018: November 13-14, 2018 | Denver, CO">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, maximum-scale=1 user-scalable=no">
     <link rel="shortcut icon" type="image/x-icon" href="assets/faviconBooj.ico">
@@ -380,7 +380,7 @@
                                             </div>
                                             <div class="col-sm-4 form-group">
                                                 <div class="select-wrapper">
-                                                    <select id="company" name="company" required="" class="form-control watermark" aria-required="true">
+                                                    <select id="company" name="company" required class="form-control watermark" aria-required="true">
                                                         <option value="">Company</option>
                                                         <option value="guest">Guest</option>
                                                         <option value="booj">booj</option>
@@ -425,7 +425,7 @@
                                             </div>
                                             <div class="col-sm-4 form-group">
                                                 <div class="select-wrapper">
-                                                    <select id="tshirt_size" name="tshirt_size" required="" class="form-control watermark" aria-required="true">
+                                                    <select id="tshirt_size" name="tshirt_size" required class="form-control watermark" aria-required="true">
                                                         <option value="">T-shirt Size</option>
                                                         <option value="xs">XS</option>
                                                         <option value="small">Small</option>
@@ -442,23 +442,25 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-9 form-group">
+                                            <div class="col-sm-8 form-group">
                                                 <textarea id="dietary_restrictions" name="dietary_restrictions" rows="4" cols="50" class="form-control" required></textarea>
                                                 <label for="dietary_restrictions" class="form-control-placeholder textArea">Dietary Restrictions</label>
                                             </div>
-                                            <div class="col-md-3 checkboxSection">
+                                            <div class="col-md-4 checkboxSection">
                                                 <span class="label white">I Plan to Attend the...</span>
                                                 <ul class="list-unstyled">
                                                     <li class="">
                                                         <div class="checkbox">
+                                                            <div class="rectangle"><div class="checked"></div></div>
                                                             <input id="asf-broker-conference" type="checkbox" name="broker_conference" value="Yes">
-                                                            <label for="asf-broker-conference" class="white">Broker Conference on November 13-14</label>
+                                                            <label for="asf-broker-conference" class="white">Broker Conference on Nov. 13-14</label>
                                                         </div>
                                                     </li>
                                                     <li class="">
                                                         <div class="checkbox">
+                                                            <div class="rectangle"><div class="checked"></div></div>
                                                             <input id="asf-group-dinner" type="checkbox" name="group_dinner" value="Yes">
-                                                            <label for="asf-group-dinner" class="white">Group Dinner</label>
+                                                            <label for="asf-group-dinner" class="white">Group Dinner on Nov. 14</label>
                                                         </div>
                                                     </li>
                                                 </ul>
