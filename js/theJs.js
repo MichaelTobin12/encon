@@ -1,24 +1,33 @@
-$( document ).ready(function() {
-	
-
-
-});
-
 var App = jQuery(document);
 
 // document ready
 App.ready(function ($) {
 	var $win = $(window);
 	var $body = $('body');
-	var $header = $('#site-header');
 
-	var $navAnchor = $('#nav-anchor');
 	var $mobileNav = $('#mobile-nav');
 	var $form = $('#contact-form');
+
 	var nav = $('.nav-list');
+	var siteNav = $('.siteNav');
+
+	var menuWasClicked = false;
+	var lastScrolled;
+	var lastScrolledTop;
+
 	// Anchors corresponding to menu items
 
 	var scrollTrigger =$('.scrollTrigger');
+	var scrollTriggerTop = $('.scrollTriggerTop');
+
+	// var scrollWindowSave = $win.scrollTop();
+	var detailsAnchor = $('#details');
+	var scheduleAnchor = $('#schedule');
+	var speakersAnchor = $('#speakers');
+	var sponsorsAnchor = $('#sponsors');
+	var locationAnchor = $('#location');
+	var rsvpAnchor = $('#rsvp');
+
 	var anchorArray = [
 	'details',
 	'schedule',
@@ -28,26 +37,94 @@ App.ready(function ($) {
 	'rsvp'
 	];
 
+	var pusherArray = [];
 
-	$(window).scroll(function() { //when window is scrolled
-	    // console.log(scrollTrigger.offset());
-	    // console.log('scroll')
-	    // console.log($(window).scrollTop());
+var lastScrollTop = 0;
+	$(window).scroll(function() {
+  		var fixed_position = scrollTrigger.offset().top;
+  		var fixed_height = scrollTrigger.height();
 
+  		var fixedTop_Position = scrollTriggerTop.offset().top;
+  		var fixedTop_height = scrollTriggerTop.offset().top;
 
-	  });
+  		if(menuWasClicked == false){
+  			for (var i = 0; i < anchorArray.length; i++) {
+				var tempAnchor = $('#'+anchorArray[i]);
+
+				var toCross_position = tempAnchor.offset().top;
+  				var toCross_height = tempAnchor.height();
+
+  				if (fixed_position + fixed_height  < toCross_position) {
+  					if((pusherArray.indexOf(anchorArray[i]) > -1)){
+  						pusherArray.splice(i, 1);
+  					}
+				}
+				else if (fixed_position > toCross_position + toCross_height) {
+				} 
+				else {
+				    if((pusherArray.indexOf(anchorArray[i]) > -1)){
+				    }else{
+				    	$('.siteNav ul li .dot.active').removeClass('active');
+						$(".siteNav a[href*='"+anchorArray[i]+"']").find('.dot').addClass('active');
+				    	if(lastScrolled != anchorArray[i]){
+				    		$('html, body').animate({
+						        scrollTop: tempAnchor.offset().top
+						    }, 'slow');
+						    lastScrolled = anchorArray[i];
+						}
+				    	pusherArray.push(anchorArray[i]);
+				    }
+				}
+
+			    if (fixedTop_Position + fixedTop_height  < toCross_position) {
+				}
+				else if (fixedTop_Position > toCross_position + toCross_height) {
+				} 
+				else {
+				    if((pusherArray.indexOf(anchorArray[i]) > -1)){
+				    }else{
+				    	lastScrolledTop = anchorArray[i-1];
+				    	$('.siteNav ul li .dot.active').removeClass('active');
+						$(".siteNav a[href*='"+lastScrolledTop+"']").find('.dot').addClass('active');
+
+				    }
+				}
+				
+			}
+  		}
+	});
+
+	$('a[href^="#"]').on('click', function(event) {
+	    var target = $(this.getAttribute('href'));
+	    if( target.length ) {
+	        event.preventDefault();
+	        $("html body").stop(false,true).animate({
+	            scrollTop: target.offset().top
+	        }, 1000);
+	    }
+	});
 
 
 	 $('.siteNav ul li').click(function(e){
 	     	$('.siteNav ul li .dot.active').removeClass('active');
     		$(this).find('.dot').addClass('active');
-    		console.log(this);
-    		var scrollTo = $(this).find('a').attr('href');
-    		console.log(scrollTo);
-    		// window.scroll({ top: $('#'+scrollTrigger).offset(), left: 0, behavior: 'smooth' })
+    		menuWasClicked = true;
+    		setTimeout(function(){ menuWasClicked = false; }, 3000);
 	  });
 
-	 
+	 $('.nav-list a').click(function(e){
+    		menuWasClicked = true;
+    		setTimeout(function(){ menuWasClicked = false; }, 10000);
+	  });
+
+
+	$.fn.isAfter = function(sel){
+        return this.prevAll().filter(sel).length !== 0;
+    };
+
+    $.fn.isBefore= function(sel){
+        return this.nextAll().filter(sel).length !== 0;
+    };
 
 	// floating labels
     if ($.fn.floatLabel) {
@@ -59,17 +136,10 @@ App.ready(function ($) {
     }
 
 
-    // handles nav position
-	function hasScrolled() {
-		var st = $(this).scrollTop();
-		var navScrollTop = $navAnchor.offset().top;
+    function scrollControl(position){
+    	// console.log(position);
+    }
 
-		if (st > navScrollTop) {
-			$header.addClass('show');
-		} else {
-			$header.removeClass('show');
-		}
-	}
 
 	function clearForm() {
 		$form.find('input:text, input[type="email"]').val('');
@@ -94,20 +164,19 @@ App.ready(function ($) {
 		}
 	}
 
-	App.on('click', '.nav-toggle', function() {
+	//Trigger menu on click... obvi
+	App.on('click', '.mobileBanner', function() {
 		var el = $(this);
-
-		$body.toggleClass('nav-open')
-		el.toggleClass('active');
-		$mobileNav.toggleClass('open');
+		if($mobileNav.hasClass('active')){
+			$mobileNav.removeClass('active');
+		}else{
+			$mobileNav.addClass('active');
+		}
 	});
 
-	App.on('click', '.nav-list >li >a', function(e) {
+	App.on('click', '.nav-list >a >li', function(e) {
 		e.preventDefault();
-
-		if ($body.hasClass('nav-open')) {
-			$('.nav-toggle').trigger('click');
-		}
+		$mobileNav.removeClass('active');
 	});
 
 });

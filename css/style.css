@@ -65,6 +65,14 @@
 	position: fixed;
 	width: 100%;
 	bottom: 10%;
+	height: 2px;
+}
+
+.scrollTriggerTop{
+	position: fixed;
+	width: 100%;
+	top: 10%;
+	height: 2px;
 }
 
 .mainContent{
@@ -78,7 +86,7 @@
 	top: 50%;
 	-webkit-transform: rotate(-90deg);
 	transform: rotate(-90deg);
-	left: -131px;
+	
 }
 
 .mainContent .logo {
@@ -135,7 +143,7 @@
 }
 #schedule .timeSheet .aBox{
 	height: 81px;
-	min-width: 293px;
+	/*min-width: 293px;*/
 	width: 100%;
 	padding-left:30px;
 	padding-top:15px;
@@ -180,7 +188,6 @@
 }
 
 #speakers .innovatorBox {
-	min-height: 562px;
 	border: 1px solid #D8D8D8;
 	margin-bottom: 60px;
 
@@ -244,8 +251,7 @@
 }
 
 #sponsors .sponsor {
-	height: 362px;
-	width: 380px;
+	
 	border: 1px solid #D8D8D8;
 	background-color: #fff;
 	display:table-cell;
@@ -269,35 +275,31 @@
 
 }
 
-#location .col-sm-6{
+#location .col-lg-6{
 	padding-left: 0px;
 }
-#location .offset-sm-1{
-	margin-left: 3.333333%;
-	padding-top: 50px;
-}
 
-#location .offset-sm-1 h2 {
+#location .offset-lg-1 h2 {
 	margin-bottom: 42px;
 }
 
-#location .offset-sm-1 .h3 {
+#location .offset-lg-1 .h3 {
 	margin-bottom: 0px;
 }
-#location .offset-sm-1 div.h2{
+#location .offset-lg-1 div.h2{
 	line-height: unset;
 	margin-bottom: 50px;
 }
 
-#location .offset-sm-1 p {
+#location .offset-lg-1 p {
 	width: 68%;
 	margin-bottom: 35px;	
 }
-#location .offset-sm-1 .disc{
+#location .offset-lg-1 .disc{
 	margin-top: 30px;
 	width: 68%;
 }
-#location .offset-sm-1 .btn-blue{
+#location .offset-lg-1 .btn-blue{
 	text-decoration: none;
 	height: 40px;
 	width: 362px;
@@ -306,7 +308,7 @@
 	display: block;
 	text-align: center;
 }
-#location .offset-sm-1 .btn-blue div {
+#location .offset-lg-1 .btn-blue div {
 	font-size: 18px;
 	font-family: GothamBook;
 	padding-top: 13px;
@@ -446,14 +448,39 @@
 #mobile-nav{
 	display: none;
 }
+
 #mobile-nav.active{
+	display: unset;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	background-color: white;
 	z-index: 1000;
 }
+.mobile-nav .list-unstyled {
+	margin-top: 80px;
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+}
 
+.mobile-nav .list-unstyled a{
+	text-decoration: none;
+}
+.mobile-nav .list-unstyled li {
+	margin: 10px 0 30px;
+	font-size:36px;
+	text-align: center;
+}
+
+.mobileBanner{
+	background:rgba(255,255,255,0.5);
+	position: fixed;
+    top: 0;
+    right: 0;
+    height: 45px;
+    width: 50px;
+    z-index: 1010;
+}
 #mobileHam {
 	color: #000;
 	position: fixed;
@@ -499,7 +526,7 @@
 	    -moz-transition:all .3s ease;
 	    transition:all .3s ease;
 	}
-	#location .offset-sm-1 .btn-blue:hover{
+	.btn-blue:hover{
 		box-shadow: 0 7px 65px -13px rgba(0,0,0,0.5);
 	   	-webkit-transition:all 1s ease;
 	    -moz-transition:all .3s ease;
@@ -520,89 +547,405 @@
 	}*/
 }
 
-/* Custom, iPhone Retina */ 
-/*@media only screen and (min-width : 320px) {
-	.mobile-nav,
-	{
-		visibility: visible;
-	}
-	.siteNav{
-		visibility: hidden;
-	}
-	.menu{
-		display: unset;
-	}
-	.menu.icon {
-		color: #000;
-		position: absolute;
-		margin-left: 2px;
-		margin-top: 10px;
-		width: 17px;
-		height: 1px;
-		background-color: currentColor;
-	}
-	.menu.icon:before {
-		content: '';
-		position: absolute;
-		top: -5px;
-		left: 0;
-		width: 17px;
-		height: 1px;
-		background-color: currentColor;
-	}
-	.menu.icon:after {
-		content: '';
-		position: absolute;
-		top: 5px;
-		left: 0;
-		width: 17px;
-		height: 1px;
-		background-color: currentColor;
-	}
-}*/
-
-
-
 /* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
+@media only screen and (min-width : 360px) and (max-width: 767px){
 	.siteNav{
 		visibility: hidden;
 	}
 	#mobileHam{
 		display: unset;
 	}
-	
+	.date{
+		display: none;
+	}
+	.mainContent .logo {
+	    margin-top: 100px;
+	    margin-bottom: 100px;
+	}
+	#landingContent h1 {
+		font-size:48px;
+		line-height: 52px;
+	}
+	#details .thatOneGradient {
+	    padding-top: 15px;
+	    height: 255px;
+	}
+	#details .thatOneGradient h3{
+		font-size:16px;
+		line-height: 28px;
+	}
+	#details .mt60 p {
+	    width: 100%;
+	}
+	#schedule .thatOneGradient {
+	    height: 337px;
+	    padding-top: 15px;
+	}
+	#schedule .thatOneGradient p {
+	    margin-top: 20px;
+	    width: 100%;
+	}
+	#schedule .timeSheet .col-sm-3 {
+	     height: unset; 
+	}
+	#speakers p {
+	    width: 100%;
+	}
+	#sponsors .thatOneGradient {
+	    height: 337px;
+	    padding-top: 15px;
+	}
+	#sponsors .thatOneGradient p {
+	    width: 100%;
+	}
+	#sponsors .sponsor{
+		height: 300px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#sponsors .sponsor img{
+		width: 342px;
+	}
+	#sponsors .col-sm-4 {
+		margin-bottom: 20px;
+	}
+	#location img {
+	    width: 100%;
+	    height: 225px;
+	}
+	#location .col-lg-6 {
+	    padding-left: 15px;
+	}
+	#location .offset-lg-1 h2 {
+	    margin-bottom: 42px;
+	    margin-top: 25px;
+	}
+	#location .offset-lg-1 p {
+	    width: 100%;
+	    margin-bottom: 35px;
+	}
+	#location .offset-lg-1 .btn-blue {
+	    width: 340px;
+	}
+	#location .offset-lg-1 .disc {
+	    margin-top: 30px;
+	    width: 100%;
+	    margin-bottom: 20px;
+	}
+	#rsvp .thatOneGradient {
+	    padding-top: 15px;
+	}
+	.form-group {
+	    margin-bottom: 30px;
+	}
+	.btn-white {
+	    width: 342px;
+	}
+	#rsvp .rsvpDes {
+	    width: 100%;
+	}
+	.mobileBanner{
+		display: inline-block;
+	}
+
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 768px) and (max-width: 991px) {
+	.btn-white {
+	    width: 272px;
+	}
+	#details .thatOneGradient h3{
+		line-height: 36px;
+	}
+	.form-group {
+	    margin-bottom: 0px;
+	}
+	#location .offset-lg-1 .btn-blue {
+	    width: 362px;
+	}
+	#location .offset-lg-1 p {
+	    width: 68%;
+	    margin-bottom: 35px;
+	}
+	#location .col-lg-6 {
+	    padding-left: 0px;
+	}
+	#sponsors .col-sm-4 {
+		margin-bottom: 0px;
+	}
+	.mainContent .logo {
+    	margin-top: 100px;
+	    margin-bottom: 200px;
+	}
+	#speakers p {
+	    width: 46%;
+	}
+	#schedule .timeSheet .col-sm-3 {
+	     height: 100%; 
+	}
+	#landingContent h1 {
+		font-size:48px;
+	}
 	.siteNav{
 		visibility: hidden;
 	}
 	#mobileHam{
 		display: unset;
+	}
+	.date{
+		left: -152px
+	}
+	.underH1{
+		width: 75%;
+      	margin-top: 50px;
+	}
+	#details .mt60 p{
+		width: 95%;
+	}
+	#details .thatOneGradient{
+		padding-top: 30px;
+	}
+	#details .thatOneGradient h3{
+		font-size: 21px;
+	}
+	#schedule .thatOneGradient{
+		padding-top: 50px;
+	}
+	#schedule .timeSheet .col-sm-3 h4{
+		padding-left: 10px;
+		font-size:21px;
+	}
+	#schedule .timeSheet .aBox{
+		padding-left: 10px;
+		height: 85px;
+		margin-bottom: 10px;
+		padding-top: 7px;
+	}
+	#schedule .timeSheet .aBox h5 {
+		font-size: 16px;
+	}
+	#schedule .timeSheet {
+		height: 540px;
+	}
+	#speakers .innovatorBox .peopleInfo {
+	    padding-top: 20px;
+    	padding-left: 25px;
+	    padding-bottom: 30px;
+	}
+	#speakers .innovatorBox .peopleInfo .lightblue {
+	    position: absolute;
+	    bottom: 17px;
+    	left: 26px;
+	}
+	#speakers .h1 {
+		font-size: 52px;
+   	  	line-height: 64px;
+	}
+	#sponsors .thatOneGradient {
+	    padding-top: 50px;
+	}
+	#sponsors .thatOneGradient p {
+	    width: 47%;
+	}
+	#sponsors .sponsor{
+		height: 200px;
+		width: 200px;
+	}
+	#sponsors .sponsor img{
+		width: 175px;
+	}
+	#sponsors .sponsor h1{
+		font-size: 48px;
+    	line-height: 56px;
+	}
+	#location img {
+	    width: 80%;
+	    height: 300px;
+	    margin: 0px auto;
+	    margin-top: 20px;
+	}
+	#location .offset-lg-1 h2 {
+	   	margin-top: 30px;
+	}
+	#location .offset-lg-1 .disc {
+	    margin-top: 30px;
+	    width: 68%;
+	}
+	#rsvp .thatOneGradient {
+	    padding-top: 50px;
+	}
+	#rsvp .rsvpDes {
+	    width: 47%;
+	}
+	.mobileBanner{
+		display: inline-block;
 	}
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (min-width : 992px) and (max-width: 1999px) {
+	.mobileBanner{
+		display: none;
+	}
+	#rsvp .thatOneGradient {
+	    padding-top: 112px;
+	}
+	#location .offset-lg-1 h2 {
+	    margin-bottom: 42px;
+	}
+	#sponsors .sponsor h1{
+		font-size: 72px;
+		line-height: 84px;
+	}
+	#sponsors .sponsor img{
+		width: unset;
+	}
+	#sponsors .thatOneGradient {
+	    padding-top: 112px;
+	}
+	#speakers .h1 {
+		font-size: 72px;
+		line-height: 84px;
+	}
+	#speakers .innovatorBox .peopleInfo .lightblue {
+	    position: absolute;
+	    bottom: 30;
+	    left: 41;
+	}
+	#speakers .innovatorBox .peopleInfo {
+	    padding-top: 36px;
+	    padding-left: 41px;
+	    padding-bottom: 30px;
+	}
+	#schedule .timeSheet .aBox h5 {
+		font-size: 18px;
+	}
+	#schedule .timeSheet .aBox{
+		margin-bottom: 0px;
+		height: 81px;
+		padding-left: 30px;
+		padding-top: 15px;
+	}
+	#schedule .timeSheet .col-sm-3 h4{
+		padding-left: 30px;
+	}
+	#schedule .thatOneGradient{
+		padding-top: 112px;
+	}
+	#landingContent h1 {
+		font-size:62px;
+	}
 	.siteNav{
 		visibility: visible;
 	}
 	#mobileHam{
 		display: none;
 	}
+	.date{
+		left: -138px;
+	}
+	#details .mt60 p{
+		width: 95%;
+	}
+	.mt60{
+		margin-top: 50px;
+	}
+	#details .thatOneGradient{
+		padding-top: 90px;
+	}
+	#details .thatOneGradient h3{
+		font-size: 22px;
+	}
+	#sponsors .sponsor{
+		height: 300px;
+		width: 300px;
+	}
+	#location .offset-lg-1{
+		margin-left: 8.333333%;
+	}
+	#location .offset-lg-1 p{
+		margin-bottom: 25px;
+	}
+	#location img{
+	    width: 500px;
+		height: 300px;
+		margin-top: 0px;
+	}
+	.underH1{
+		width: 66%;
+      	margin-top: 50px;
+	}
+	#speakers{
+		margin-top: 0px;
+	}
+
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+	#speakers{
+		margin-top: 120px;
+	}
+	#landingContent h1 {
+		font-size: 72px;
+	}
 	.siteNav{
 		visibility: visible;
 	}
 	#mobileHam{
 		display: none;
 	}
+	#location .offset-lg-1{
+		padding-top: 50px;
+	}
+	.date{
+		left: -131px;
+	}
 	.form-group{
 		margin-bottom: 60px;
 	}
+	#sponsors .sponsor{
+		height: 362px;
+		width: 380px;
+	}
+	#location .offset-lg-1 p{
+		margin-bottom: 35px;
+	}
+	#location .offset-lg-1{
+		margin-left: 3.333333%;
+	}
+	#location img {
+		width: 604px;
+		height: 380px;
+	}
+	.underH1{
+		width: 52%;
+      	margin-top: 60px;
+	}
 }
+
+@media only screen and (min-width : 1200px) and (max-width :1300px){
+	#landingContent h1 {
+		font-size:68px;
+	}
+	#location .offset-lg-1{
+		padding-top: 0px;
+	}
+	.date{
+		left: -136px;
+	}
+	#sponsors .sponsor{
+		height: 300px;
+		width: 300px;
+	}
+}
+
+/*@media only screen and (min-width : 1201px) and (max-width :1229px){
+	#location .offset-lg-1{
+		padding-top: 0px;
+	}
+	.date{
+		left: -136px;
+	}
+}*/

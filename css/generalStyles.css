@@ -60,6 +60,9 @@ body{background-color:#f6f6f6;}
 .mt65{
 	margin-top: 65px;
 }
+.mb125{
+	margin-bottom:125px;
+}
 .disc{
 	font-family: 'GothamBookItalic';
 	font-size: 14px;
@@ -144,22 +147,25 @@ p {
 .container {
     max-width: 960px;
 }*/
-
+@media (min-width: 992px){
+	.container {
+	    max-width: 1025px;
+	}
+}
 @media (min-width: 1300px){
-.container {
-    max-width: 1236px;
+	.container {
+	    max-width: 1236px;
+	}
 }
-
 @media (min-width: 576px){
-.offset-sm-1 {
-    margin-left: 6.333333%;
-}
-
-@media (min-width: 576px){
-.col-sm-11 {
-    -ms-flex: 0 0 93.666667%;
-    flex: 0 0 93.666667%;
-    max-width: 93.666667%;
+	.col-sm-11 {
+	    -ms-flex: 0 0 93.666667%;
+	    flex: 0 0 93.666667%;
+	    max-width: 93.666667%;
+	}
+	.offset-sm-1 {
+	    margin-left: 6.333333%!important;
+	}
 }
 
 

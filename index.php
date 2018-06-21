@@ -25,7 +25,9 @@
             <a href="#rsvp"><li><span class="mr20">RSVP</span><span class="dot"></span></li></a>
         </ul>
     </header>
-    <div id="mobileHam"></div>
+    <div class="mobileBanner">
+        <div id="mobileHam"></div>    
+    </div>
     <div id="mobile-nav" class="mobile-nav">
         <div class="container-fluid">
             <ul class="list-unstyled nav-list">
@@ -38,6 +40,7 @@
             </ul>
         </div>
     </div>
+    <div class="scrollTriggerTop">&nbsp;</div>
     <div class="scrollTrigger">&nbsp;</div>
     <div class="container-fluid">
         <div class="row">
@@ -64,10 +67,10 @@
                     <div class="thatOneGradient">
                         <div class="container">
                             <div class="row">
-                                <div class="col-sm-2">
+                                <div class="col-md-12 col-lg-2">
                                     <h2 class="white">Details</h2>
                                 </div>
-                                <div class="col-sm-10 pt20">
+                                <div class="col-md-12 col-lg-10 pt20">
                                     <h3 class="white">
                                     The Enterprise Network Annual Conference<br>
                                     November 13-14, 2018 | The Four Seasons Hotel | Denver, Colorado<br>
@@ -324,12 +327,12 @@
                 <div id="location">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-md-12 col-lg-6">
                                 <img class="block mb10" src="/assets/images/Hotel/outside.jpg">
                                 <img class="block mb10" src="/assets/images/Hotel/inside.jpg">
                                 <img class="block" src="/assets/images/Hotel/beds.jpg">
                             </div>
-                            <div class="col-sm-5 offset-sm-1">
+                            <div class="col-lg-5 col-md-12 offset-lg-1">
                                 <h2 class="darkblue">Location</h2>
                                 <div>
                                     <span class="h3 darkblue block">
@@ -354,7 +357,7 @@
                             <h2 class="white">RSVP</h2>
                             <p class="white rsvpDes">Our event is open to Enterprise Network members only. Please let us know which events you plan to attend below.</p>
                             <div class="row">
-                                <div class="col-sm-9">
+                                <div class="col-md-12 col-lg-9">
                                     <form id="contact-form" action="contact.php" method="post" novalidate="novalidate">
                                         <div class="row">
                                             <div class="form-group col-sm-4">
@@ -384,9 +387,9 @@
                                                         <option value="Baird &amp; Warner">Baird &amp; Warner</option>
                                                         <option value="Charles Reinhart Company Realtors">Charles Reinhart Company Realtors</option>
                                                         <option value="Clark Realty Corporation">Clark Realty Corporation</option>
+                                                        <option value="Cutler Real Estate">Cutler Real Estate</option>
                                                         <option value="Danberry Realtors">Danberry Realtors</option>
                                                         <option value="Ebby Halliday Realtors">Ebby Halliday Realtors</option>
-                                                        <option value="Funkhouser Real Estate Group">Funkhouser Real Estate Group</option>
                                                         <option value="Gardner Realtors">Gardner Realtors</option>
                                                         <option value="Hasson Company Realtors">Hasson Company Realtors</option>
                                                         <option value="Helen Adams Realty">Helen Adams Realty</option>
@@ -409,9 +412,12 @@
                                                         <option value="Residential Properties Ltd.">Residential Properties Ltd.</option>
                                                         <option value="Skogman Realty">Skogman Realty</option>
                                                         <option value="Slifer Smith &amp; Frampton Real Estate">Slifer Smith &amp; Frampton Real Estate</option>
+                                                        <option value="Stark Company Realtors">Stark Company Realtors</option>
                                                         <option value="The Group, Inc. Real Estate">The Group, Inc. Real Estate</option>
                                                         <option value="Turpin Real Estate">Turpin Real Estate</option>
-                                                        <option value="Wright Kingdom Real Estate">Wright Kingdom Real Estate</option>
+                                                        <option value="Watson Realty Corp.">Watson Realty Corp.</option>
+                                                        <option value="Willis Allen Real Estate">Willis Allen Real Estate</option>
+                                                        <option value="WK Real Estate">WK Real Estate</option>
                                                     </select>
                                                     <label for="company" class="form-control-placeholder noDisplay">Company</label>
                                                     <?php echo file_get_contents("assets/svg/keyboard_arrow_right_24px.svg"); ?>
@@ -458,8 +464,8 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-3 margin-top-30 md-margin-top-85">
+                                        <div class="row mb125">
+                                            <div class="col-md-3">
                                                 <input type="submit" value="Submit" name="Submit" class="btn-white">
                                             </div>
                                         </div>
@@ -474,7 +480,11 @@
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/theJs.js"></script>
