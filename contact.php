@@ -22,6 +22,8 @@
     $con_from = "amanda@booj.com";
     $con_headers = 'From: ' . $con_from;
     $con_subject = 'ENCON 2018 RSVP';
-    $confirmation = 'Thank you for RSVPing to ENCON X. We look forward to seeing you in September. If you have any questions leading up to the event, please let me know.';
+    $confirmation = 
+    "You are now registered for The Enterprise Network Annual Conference.\r\n\r\nOur team will be sending communications leading up to the event as more details are announced, but if you have any questions until then, please contact our Marketing Director and Event Coordinator, Amanda Zaske, at amanda@booj.com. She is happy to assist.\r\n\r\nWe look forward to seeing you in November at ENCON!";
+    
     $con_send = mail($con_to, $con_subject, $confirmation, $con_headers);
 ?>

@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<!-- <!DOCTYPE HTML> -->
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="ENCON 2018">
@@ -9,12 +11,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/generalStyles.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/min/generalStyles.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/min/style.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/css/generalStyles.css"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script> -->
     <title>ENCON 2018</title>
+    <script src="js/min/modernizr-2.8.3.min.js"></script>
+
 </head>
 <body id="ENCON2018">
+    <div class="scrollTrigger"></div>
     <header class="siteNav" id="site-header">
         <ul class="darkblue">
             <a href="#details"><li><span class="mr20">Details</span><span class="dot active"></span></li></a>
@@ -25,8 +32,8 @@
             <a href="#rsvp"><li><span class="mr20">RSVP</span><span class="dot"></span></li></a>
         </ul>
     </header>
-    <div class="mobileBanner">
-        <div id="mobileHam"></div>    
+    <div class="mobileBanner" role="button">
+        <div id="mobileHam"></div>
     </div>
     <div id="mobile-nav" class="mobile-nav">
         <div class="container-fluid">
@@ -40,11 +47,11 @@
             </ul>
         </div>
     </div>
-    <div class="scrollTriggerTop">&nbsp;</div>
-    <div class="scrollTrigger">&nbsp;</div>
-    <div class="container-fluid">
+    <div class="container-fluid mainfluid">
         <div class="row">
-            <div class="date darkblue">#ENCON | November 13-14, 2018 | Denver, CO</div>
+            <div class="dateContainer">
+                <div class="date darkblue">#ENCON | November 13-14, 2018 | Denver, CO</div>
+            </div>            
             <!-- <div class="col-sm-1 dateCol"></div> -->
             <div class="col-sm-11 offset-sm-1 mainContent">
                 <div class="container">
@@ -54,7 +61,7 @@
                         </div>
                     </div>
                     <div id="landingContent" class="row">
-                        <div class="col-sm-9">
+                        <div class="col-md-9 col-sm-11">
                             <h1 class="darkblue">
                             The next TEN years,<br>
                             a new era of <span class="lightblue">thinking</span>.
@@ -63,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="details">
+                <div id="details" class="step" data-step="1">
                     <div class="thatOneGradient">
                         <div class="container">
                             <div class="row">
@@ -81,20 +88,20 @@
                             
                         </div>
                     </div>
-                    <img class="waveSvg block" src="/assets/svg/website-wave.svg">
+                    <img class="waveSvg block" src="/assets/svg/website-wave.svg" alt="Image of Waves">
                     <div class="container mt60">
                         <div class="row">
                             <div class="col-sm-6">
-                                <p class="mb40">Join other network members as we explore the latest trends directly impacting the real estate industry and your brokerage. The theme for this year's event is "The Next TEN Years: A New Era of Thinking", and will focus on preparing your brokerage for the next wave of innovations that will change the way you do business.</p>
-                                <p>Last year, we explored topics covered at previous conferences over the last decade. This year, we're looking towards the future and unveiling the strategies, tools and advancements that will allow you to thrive as the industry evolves.</p>
+                                <p class="mb40 ">Join other network members as we explore the latest trends directly impacting the real estate industry and your brokerage. The theme for this year's event is "The Next TEN Years: A New Era of Thinking", and will focus on preparing your brokerage for the next wave of innovations that will change the way you do business.</p>
+                                <p class="">Last year, we explored topics covered at previous conferences over the last decade. This year, we're looking towards the future and unveiling the strategies, tools and advancements that will allow you to thrive as the industry evolves.</p>
                             </div>
                             <div class="col-sm-6">
-                                <p>The industry is changing at a fast pace, and what it takes to be successful today is a small fraction of what will be expected from you over the next decade -- both from your agents and their customers. Together, we can continue to pave the way for our industry, so join us as we enter a new era of thinking at #ENCON!</p>
+                                <p class="">The industry is changing at a fast pace, and what it takes to be successful today is a small fraction of what will be expected from you over the next decade -- both from your agents and their customers. Together, we can continue to pave the way for our industry, so join us as we enter a new era of thinking at #ENCON!</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="schedule" class="mt65">
+                <div id="schedule" class="mt65 step" data-step="2">
                     <div class="thatOneGradient">
                         <div class="container">
                             <h2 class="white">Schedule</h2>
@@ -114,6 +121,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-3">
+                                <hr class="mt50"/>
                                 <h4 class="upper lightblue mb40 mt40">Tues, Nov. 13</h4>
                                 <div class="aBox">
                                     <h5>8:00am - 9:00am</h5>
@@ -137,6 +145,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-3">
+                                <hr class="mt50"/>
                                 <h4 class="upper lightblue mb40 mt40">Wed, Nov. 14</h4>
                                 <div class="aBox">
                                     <h5>8:00am - 9:00am</h5>
@@ -155,11 +164,12 @@
                                     <span>General Sessions</span>
                                 </div>
                                 <div class="aBox">
-                                    <h5>5:30pm - 10:00pm</h5>
+                                    <h5>6:30pm - 10:00pm</h5>
                                     <span>Group Dinner</span>
                                 </div>
                             </div>
                             <div class="col-sm-3">
+                                <hr class="mt50"/>
                                 <h4 class="upper lightblue mb40 mt40">Thurs, Nov. 14</h4>
                                 <div class="aBox">
                                     <h5>9:30am - 10:30am</h5>
@@ -170,10 +180,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="borderLine"></div> -->
                     </div>
+                    <!-- BorderLine at the bottom -->
+                    <div class="modifiedContainer"></div>
                 </div>
-                <div id="speakers">
+                <div id="speakers" class="step" data-step="3">
                     <div class="container">
                         <h2 class="darkblue">Speakers</h2>
                         <p class="darkblue">Meet the experts and brilliant minds speaking at this year's event! Our speakers will share their industry knowledge, tactics, advice, and how it applies to your brokerage.</p>
@@ -290,7 +301,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="sponsors" class="mt65">
+                <div id="sponsors" class="mt65 step" data-step="5">
                     <div class="thatOneGradient">
                         <div class="container">
                             <h2 class="white">Sponsors</h2>
@@ -298,12 +309,12 @@
                         </div>
                     </div>
                     <div class="container">
-                        <div class="row mt50">
+                        <div class="row mt80">
                             <div class="col-sm-4">
                                 <a href="https://www.planomatic.com/" target="_blank">
                                     <div class="sponsor">
                                         <!-- <img src="http://placehold.it/362/362"> -->
-                                        <img src="/assets/images/Sponsors/planomatic.png" alt="planomatic">
+                                        <img src="/assets/images/Sponsors/planomatic.png" alt="Sponsor Planomatic">
                                     </div>
                                 </a>
                             </div>
@@ -311,7 +322,7 @@
                                 <a href="http://www.fromyourfriends.com/" target="_blank">
                                     <div class="sponsor">
                                         <!-- <img src="http://placehold.it/362/362"> -->
-                                        <img src="/assets/images/Sponsors/from-your-friends.png" alt="friends">
+                                        <img src="/assets/images/Sponsors/from-your-friends.png" alt="Sponsor From Your Friends">
                                     </div>
                                 </a>
                             </div>
@@ -324,13 +335,13 @@
                         </div>
                     </div>
                 </div>
-                <div id="location">
+                <div id="location" class="step" data-step="6">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12 col-lg-6">
-                                <img class="block mb10" src="/assets/images/Hotel/outside.jpg">
-                                <img class="block mb10" src="/assets/images/Hotel/inside.jpg">
-                                <img class="block" src="/assets/images/Hotel/beds.jpg">
+                                <img class="block mb10" src="/assets/images/Hotel/outside.jpg" alt="Picture of Outside Location">
+                                <img class="block mb10" src="/assets/images/Hotel/inside.jpg" alt="Picture of Inside Location">
+                                <img class="block" src="/assets/images/Hotel/beds.jpg" alt="Picture of Hotel Beds">
                             </div>
                             <div class="col-lg-5 col-md-12 offset-lg-1">
                                 <h2 class="darkblue">Location</h2>
@@ -346,41 +357,56 @@
                                 <p>Within walking distance to major downtown attractions, nightlife destinations, restaurants, bars and boutiques -- so you'll have plenty of opportunities to explore all that Denver has to offer!</p>
                                 <p>Room reservations must be made by Tuesday, October 2, 2018. Four Seasons is offering preferred pricing to all conference attendees at the reduced rate of $265/night.</p>
                                 <a href="https://bit.ly/2jqzS1t" target="_blank" class="btn-blue"><div class="white">Book Your Room</div></a>
-                                <div class="disc">Please Note: If you plan to extend your stay before or after the conference, please call to book your reservation at 303-389-3300</div>
+                                <div class="disc">Please Note: If you plan to extend your stay before or after the conference, please call to book your reservation at 303-389-3300.</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="rsvp">
+                <div id="rsvp" class="step" data-step="7">
                     <div class="thatOneGradient">
                         <div class="container">
                             <h2 class="white">RSVP</h2>
                             <p class="white rsvpDes">Our event is open to Enterprise Network members only. Please let us know which events you plan to attend below.</p>
                             <div class="row">
                                 <div class="col-md-12 col-lg-9">
-                                    <form id="contact-form" action="contact.php" method="post" novalidate="novalidate">
+                                    <div id="success-modal" class="modal fade">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">ENCON 2018</h5>
+                                                    <button type="button" class="btn btn-link close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Thank you for registering. We look forward to seeing you at ENCON 2018!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form id="contact-form" action="contact.php" method="post">
                                         <div class="row">
                                             <div class="form-group col-sm-4">
-                                                <input id="first_name" type="text" name="first_name" required class="form-control" aria-required="true">
+                                                <input id="first_name" type="text" name="first_name" required="required" class="form-control">
                                                 <label for="first_name" class="form-control-placeholder">First Name</label>
                                             </div>
                                             <div class="form-group col-sm-4">
-                                                <input id="last_name" type="text" name="last_name" required class="form-control" aria-required="true">
+                                                <input id="last_name" type="text" name="last_name" required="required" class="form-control">
                                                 <label for="last_name" class="form-control-placeholder">Last Name</label>
                                             </div>
                                             <div class="form-group col-sm-4">
-                                                <input id="email" type="email" name="email" required class="form-control" aria-required="true">
+                                                <input id="email" type="email" name="email" required="required" class="form-control">
                                                 <label for="email" class="form-control-placeholder">Email Address</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-sm-4">
-                                                <input id="official_title" type="text" name="official_title" required class="form-control" aria-required="true">
+                                                <input id="official_title" type="text" name="official_title" required="required" class="form-control">
                                                 <label for="official_title" class="form-control-placeholder">Official Title</label>
                                             </div>
                                             <div class="col-sm-4 form-group">
                                                 <div class="select-wrapper">
-                                                    <select id="company" name="company" required class="form-control watermark" aria-required="true">
+                                                    <select id="company" name="company" required="required" class="form-control watermark">
                                                         <option value="">Company</option>
                                                         <option value="guest">Guest</option>
                                                         <option value="booj">booj</option>
@@ -425,7 +451,7 @@
                                             </div>
                                             <div class="col-sm-4 form-group">
                                                 <div class="select-wrapper">
-                                                    <select id="tshirt_size" name="tshirt_size" required class="form-control watermark" aria-required="true">
+                                                    <select id="tshirt_size" name="tshirt_size" required="required" class="form-control watermark">
                                                         <option value="">T-shirt Size</option>
                                                         <option value="xs">XS</option>
                                                         <option value="small">Small</option>
@@ -442,18 +468,18 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-8 form-group">
-                                                <textarea id="dietary_restrictions" name="dietary_restrictions" rows="4" cols="50" class="form-control" required></textarea>
+                                            <div class="col-sm-7 col-md-7 col-lg-8 form-group">
+                                                <textarea id="dietary_restrictions" name="dietary_restrictions" rows="4" cols="50" class="form-control"></textarea>
                                                 <label for="dietary_restrictions" class="form-control-placeholder textArea">Dietary Restrictions</label>
                                             </div>
-                                            <div class="col-md-4 checkboxSection">
+                                            <div class="col-sm-5 col-md-5 col-lg-4 checkboxSection">
                                                 <span class="label white">I Plan to Attend the...</span>
                                                 <ul class="list-unstyled">
                                                     <li class="">
                                                         <div class="checkbox">
-                                                            <div class="rectangle"><div class="checked"></div></div>
-                                                            <input id="asf-broker-conference" type="checkbox" name="broker_conference" value="Yes">
-                                                            <label for="asf-broker-conference" class="white">Broker Conference on Nov. 13-14</label>
+                                                            <div class="rectangle first active"><div class="checked"></div></div>
+                                                            <input id="asf-broker-conference" type="checkbox" checked="checked" name="broker_conference" value="Yes">
+                                                            <label for="asf-broker-conference" class="white">Conference on Nov. 13-14</label>
                                                         </div>
                                                     </li>
                                                     <li class="">
@@ -487,8 +513,14 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
     </script>
+
+    <script src='https://unpkg.com/intersection-observer'></script>
+    <script src='https://unpkg.com/scrollama'></script>
+    
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="/js/min/jquery.validate.min.js"></script>
+    <script src="/js/min/jquery.float-label.min.js"></script>
     <script type="text/javascript" src="/js/theJs.js"></script>
-    
-</body></html>
+</body>
+</html>

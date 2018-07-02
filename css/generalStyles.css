@@ -1,18 +1,32 @@
 @font-face {
     font-family: GothamBold;
-    src: url("../fonts/Gotham-Bold.otf") format("opentype");
+    src:
+    	url("../../fonts/Gotham-Bold.otf") format("opentype"),
+    	url("../../fonts/GothamBold.ttf") format("truetype")
+    ;
 }
 @font-face {
     font-family: GothamBook;
-    src: url("../fonts/GothamBook.ttf");
+    src:
+    url("../../fonts/Gotham-Book.otf") format("opentype"),
+    url("../../fonts/GothamBook.ttf") format("truetype")
+    
+    ;
 }
 @font-face {
     font-family: GothamLight;
-    src: url("../fonts/Gotham-Light.otf") format("opentype");
+    src:
+	    url("../../fonts/Gotham-Light.otf") format("opentype"),
+	    url("../../fonts/GothamLight.ttf") format("truetype")
+    ;
 }
 @font-face {
     font-family: GothamBookItalic;
-    src: url("../fonts/GothamBookItalic.ttf");
+    src:
+    	url("../../fonts/Gotham-BookItalic.otf") format("opentype"),
+	    url("../../fonts/GothamBookItalic.ttf") format("truetype")
+    ;
+    
 }
 
 
@@ -60,11 +74,14 @@ body{background-color:#f6f6f6;}
 .mt65{
 	margin-top: 65px;
 }
+.mt80{
+	margin-top: 80px;
+}
 .mb125{
 	margin-bottom:125px;
 }
 .disc{
-	font-family: 'GothamBookItalic';
+	font-family: 'GothamBookItalic', Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 20px;
 	color: #878787;
@@ -74,59 +91,59 @@ span{
 }
 .block{display: block;}
 .gothamBook{
-	font-family: 'GothamBook';
+	font-family: 'GothamBook', Arial, Helvetica, sans-serif;
 }
 .gothamBold{
-	font-family: 'GothamBold';
+	font-family: 'GothamBold', Arial, Helvetica, sans-serif;
 }
 
 .gothamLight{
-	font-family: 'GothamLight'
+	font-family: 'GothamLight', Arial, Helvetica, sans-serif;
 }
 h1{
-	font-family: 'GothamBold';
+	font-family: 'GothamBold', Arial, Helvetica, sans-serif;
 	font-size: 72px;
 	line-height: 84px;
 	letter-spacing: -1px;
 }
 .h1{
-	font-family: 'GothamBold';
+	font-family: 'GothamBold', Arial, Helvetica, sans-serif;
 	font-size: 72px;
 	line-height: 84px;
 	letter-spacing: -1px;
 }
 h2{
-	font-family: 'GothamBold';
+	font-family: 'GothamBold', Arial, Helvetica, sans-serif;
 	font-size: 36px;
 	line-height: 48px;
 	letter-spacing: -0.5px;
 }
 .h2{
-	font-family: 'GothamBold';
+	font-family: 'GothamBold', Arial, Helvetica, sans-serif;
 	font-size: 36px;
 	line-height: 48px;
 	letter-spacing: -0.5px;
 }
 h3{
-	font-family: 'GothamBook';
+	font-family: 'GothamBook', Arial, Helvetica, sans-serif;
 	font-size: 24px;
 	line-height: 36px;
 	letter-spacing: -0.33;
 }
 .h3{
-	font-family: 'GothamBook';
+	font-family: 'GothamBook', Arial, Helvetica, sans-serif;
 	font-size: 24px;
 	line-height: 36px;
 	letter-spacing: -0.33;
 }
 h4{
-	font-family: 'GothamBold';
+	font-family: 'GothamBold', Arial, Helvetica, sans-serif;
 	font-size: 24px;
 	line-height: 36px;
 	letter-spacing: -0.33;
 }
 h5{
-	font-family: 'GothamBold';
+	font-family: 'GothamBold', Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	letter-spacing: -0.11;
@@ -134,19 +151,19 @@ h5{
 }
 
 p {
-	font-family: 'Arvo', serif;
+	font-family: 'Arvo', Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	letter-spacing: -0.1px;	
 	line-height: 26px;
 	color:#132953;
 }
-
-
-/*- Modified container -*/
-/*@media (min-width: 992px){
-.container {
-    max-width: 960px;
-}*/
+.is-hidden{
+	visibility:hidden;
+}
+.fly-in{
+	visibility: visible;
+	animation: bounce-in .45s;
+}
 @media (min-width: 992px){
 	.container {
 	    max-width: 1025px;
@@ -167,28 +184,5 @@ p {
 	    margin-left: 6.333333%!important;
 	}
 }
-
-
-/*@media (max-width: 768px) {
-	
-}
-@media (min-width: 768px) {
-	
-}
-
-@media (min-width: 992px) {
-	.mobile-nav{
-		visibility: hidden;
-	}
-}
-
-@media (min-width: 1200px) {
-	.mobile-nav{
-		visibility: hidden;
-	}
-}*/
-
-
-
 
 
